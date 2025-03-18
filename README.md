@@ -25,7 +25,6 @@ A simple React application to fetch and display Pokemon images from the PokeAPI.
 Make sure you have Node.js and npm installed on your system.
 
 **Installation**
-
 - Clone the repository
   - `git clone https://github.com/AgamSingh16/Pokemon-database.git`
   - `cd Pokemon-database`
@@ -38,7 +37,6 @@ Make sure you have Node.js and npm installed on your system.
 ---
 
 ## **Project Structure**
-
 ```
 Pokemon-database/
 ├── public/               # Public assets
@@ -55,5 +53,4 @@ Pokemon-database/
 ---
 
 ## **Contributing**
-
 Feel free to submit issues or pull requests to improve the app!
