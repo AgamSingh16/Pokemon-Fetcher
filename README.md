@@ -21,7 +21,7 @@ A simple React application to fetch and display Pokemon images from the PokeAPI.
 
 ## **Getting started**
 
-**Prerequisites**
+**Prerequisites**:
 Make sure you have Node.js and npm installed on your system.
 
 **Installation**
