@@ -4,7 +4,7 @@
 
 A simple React application to fetch and display Pokemon images from the PokeAPI.
 
-### **Features**
+## **Features**
 
 - Search for any Pokemon by name
 - Display the Pokemon's sprite image
@@ -12,14 +12,14 @@ A simple React application to fetch and display Pokemon images from the PokeAPI.
 
 ---
 
-### **Tech Stack**
+## **Tech Stack**
 
 - **React**: Frontend framework
 - **CSS**: Styling -**PokeAPI**: Source of Pokemon data
 
 ---
 
-### **Getting started**
+## **Getting started**
 
 **Prerequisites**
 Make sure you have Node.js and npm installed on your system.
@@ -37,7 +37,7 @@ Make sure you have Node.js and npm installed on your system.
 
 ---
 
-### **Project Structure**
+## **Project Structure**
 
 ```
 Pokemon-database/
