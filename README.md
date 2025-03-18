@@ -54,6 +54,6 @@ Pokemon-database/
 
 ---
 
-### **Contributing**
+## **Contributing**
 
 Feel free to submit issues or pull requests to improve the app!
