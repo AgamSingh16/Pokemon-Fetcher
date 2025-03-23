@@ -9,7 +9,9 @@ A simple React application to fetch and display Pokemon images from the PokeAPI.
 ### **Things to note before running the program**
 
 The login page only accepts two username and password at the moment
+
 - **username**: admin   **password**: adminpass
+
 - **username**: user    **password**: userpass
 
 ---
