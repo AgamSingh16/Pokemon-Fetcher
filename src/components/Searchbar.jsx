@@ -4,7 +4,7 @@ function Searchbar({ pokemonName, setPokemonName, fetchData }) {
   return (
     <div className="d-flex ms-auto align-items-end">
       <input
-        class="form-control me-2"
+        className="form-control me-2"
         role="search"
         type="text"
         aria-label="Search"
@@ -12,7 +12,7 @@ function Searchbar({ pokemonName, setPokemonName, fetchData }) {
         placeholder="Enter Pokemon name"
         onChange={(e) => setPokemonName(e.target.value)}
       />
-      <button class="btn btn-outline-success" onClick={fetchData}>
+      <button className="btn btn-outline-success" onClick={fetchData}>
         Search
       </button>
     </div>

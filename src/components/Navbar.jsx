@@ -1,17 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import logo from "./src/assets/pokemon-logo.png";
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid d-flex align-items-end">
+    <nav className="navbar navbar-expand-lg bg-dark">
+      <div className="container-fluid d-flex align-items-end">
         <div className="d-flex align-items-end">
-          <Link to="/" class="navbar-brand text-white d-flex align-items-end">
+          <Link
+            to="/"
+            className="navbar-brand text-white d-flex align-items-end"
+          >
             <img
-              src="./src/assets/pokemon-logo-png-1444.png"
+              src={import.meta.env.BASE_URL + "./src/assets/pokemon-logo.png"}
               alt="Logo"
               style={{ width: "100px", height: "75px" }}
-              class="d-inline-block"
+              className="d-inline-block"
             />
           </Link>
         </div>
