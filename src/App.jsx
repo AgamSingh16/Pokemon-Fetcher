@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./css/Home.css";
 import PokemonFetcher from "./pages/PokemonFetcher";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import AdminPage from "./pages/AdminPage";
 
 function App() {
