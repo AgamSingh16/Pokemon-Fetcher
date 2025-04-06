@@ -1,29 +1,43 @@
 import React, { useState } from "react";
-import { users } from "../userinfo/users";
 import Navbar from "../components/Navbar";
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isSignup, setIsSignup] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const endpoint = isSignup ? "/signup" : "/login";
 
-    const user = users.find(
-      (u) => u.username === username && u.password === password
-    );
-    if (user) {
-      onLogin(user);
-    } else {
-      setError("Invalid username or password");
+    try {
+      const response = await fetch(`http://localhost:5000${endpoint}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.message);
+      }
+
+      if (!isSignup) {
+        onLogin(data);
+      } else {
+        alert("Signup successful. please login");
+        setIsSignup(false);
+      }
+    } catch (error) {
+      setError(error.message);
     }
   };
 
   return (
     <div>
       <Navbar />
-      <h2>Login</h2>
+      <h2>{isSignup ? "Signup" : "Login"}</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3 row">
           <label for="staticEmail" className="col-sm-2 col-form-label">
@@ -54,8 +68,11 @@ function Login({ onLogin }) {
           </div>
         </div>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <button type="submit">Login</button>
+        <button type="submit">{isSignup ? "Signup" : "Login"}</button>
       </form>
+      <button onClick={() => setIsSignup(!isSignup)}>
+        {isSignup ? "Switch to Login" : "Switch to Signup"}
+      </button>
     </div>
   );
 }

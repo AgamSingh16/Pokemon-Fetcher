@@ -6,11 +6,20 @@ async function main() {
   const client = new MongoClient(Db);
   try {
     await client.connect();
+    console.log("Connected to MongoDB");
 
-    const collections = await client.db("PokeFetch").collections();
-    collections.forEach((collection) =>
-      console.log(collection.s.namespace.collection)
-    );
+    const db = client.db("PokeFetch");
+    const userCollection = db.collection("Users");
+
+    await userCollection.insertOne({
+      username: "admin",
+      password: "admin123",
+      role: "admin",
+    });
+    console.log("Admin user added.");
+
+    const user = await userCollection.findOne({ username: "admin" });
+    console.log("User found:", user);
   } catch (e) {
     console.error(e);
   } finally {
