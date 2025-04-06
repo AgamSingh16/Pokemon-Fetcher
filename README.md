@@ -1,6 +1,6 @@
 # **Pokemon Database**
 
-![Pokemon logo](./src/assets/pokemon-logo-png-1444.png)
+![Pokemon logo](/src/assets/pokemon-logo-png-1444.png)
 
 A simple React application to fetch and display Pokemon images from the PokeAPI.
 
