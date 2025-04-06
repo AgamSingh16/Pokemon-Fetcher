@@ -12,8 +12,10 @@ function App() {
     setUser(user);
   };
 
+  const isProduction = import.meta.env.MODE === "production";
+
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router basename={isProduction ? "/Pokemon-Fetcher/" : "/"}>
       <div className="App">
         <Routes>
           <Route
