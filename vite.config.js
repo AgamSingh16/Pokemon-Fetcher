@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/Pokemon-Fetcher/",
   define: {
-    "process.env": {}, // Fix for process not being defined
+    "process.env": {},
   },
 });
