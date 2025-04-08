@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./css/Home.css";
 import PokemonFetcher from "./pages/PokemonFetcher";
 import Login from "./pages/Login";
@@ -12,22 +12,16 @@ function App() {
     setUser(user);
   };
 
-  const isProduction = import.meta.env.MODE === "production";
-
   return (
-    <Router basename={isProduction ? "/Pokemon-Fetcher/" : "/"}>
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              user ? <PokemonFetcher /> : <Login onLogin={handleLogin} />
-            }
-          />
-          <Route path="/admin" element={<AdminPage user={user} />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Routes>
+        <Route
+          path="/"
+          element={user ? <PokemonFetcher /> : <Login onLogin={handleLogin} />}
+        />
+        <Route path="/admin" element={<AdminPage user={user} />} />
+      </Routes>
+    </div>
   );
 }
 
