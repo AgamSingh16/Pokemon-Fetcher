@@ -2,12 +2,14 @@
 
 ![Pokemon logo](/src/assets/pokemon-logo-png-1444.png)
 
-A simple React application to fetch and display Pokemon images from the PokeAPI.
+A React application that allows users to search for Pokémon by name, view their sprite images, and includes user authentication with role-based access.
 
 ### **Features**
 
 - Search for any Pokemon by name
 - Display the Pokemon's sprite image
+- User authentication with login page
+- Role-based access control (Admin and User roles)
 - Responsive and clean UI using Bootstrap
 
 ---
@@ -17,13 +19,15 @@ A simple React application to fetch and display Pokemon images from the PokeAPI.
 - **React**: Frontend framework
 - **CSS**: Styling
 - **PokeAPI**: Source of Pokemon data
+- **GitHub Pages**: Hosting the application
+- **MongoDB**: Managing login credentials
 
 ---
 
 ### **Changes**
 
-- Added a login page
-- Assigned roles of admin and user
+- Added a login page for user authentication
+- Implemented role-based access control (Admin and User roles)
 - Added admin page to show whether you have admin privilege or not
 
 ---
@@ -50,7 +54,11 @@ Make sure you have Node.js and npm installed on your system.
 
 ```
 Pokemon-database/
+├── .github/workflows
+├── backend/              # Connection to MongoDB
+├── dist/                 # distribution
 ├── public/               # Public assets
+├── server/               # contains a file from .gitignore
 ├── src/                  # React components and logic
 │   ├── assets/           # Images and static assets
 │   ├── components/       # Reusable UI components

@@ -13,6 +13,9 @@ node_modules
 # Production build
 *.local
 
+# Config file
+server/config.env
+
 # Vite cache
 .vite
 
@@ -35,6 +38,3 @@ node_modules
 .env
 .env.local
 .env.*.local
-
-# Prevent changes to users.js
-server/userinfo/users.js
