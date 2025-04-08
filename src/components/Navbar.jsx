@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import logo from "./src/assets/pokemon-logo.png";
 
 function Navbar() {
   return (
