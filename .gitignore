@@ -11,8 +11,6 @@ lerna-debug.log*
 node_modules
 
 # Production build
-dist
-dist-ssr
 *.local
 
 # Vite cache
