@@ -12,7 +12,7 @@ function Navbar() {
             className="navbar-brand text-white d-flex align-items-end"
           >
             <img
-              src={import.meta.env.BASE_URL + "./src/assets/pokemon-logo.png"}
+              src={import.meta.env.BASE_URL + "./pokemon-logo.png"}
               alt="Logo"
               style={{ width: "100px", height: "75px" }}
               className="d-inline-block"
