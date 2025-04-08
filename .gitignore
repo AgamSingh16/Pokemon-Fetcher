@@ -14,7 +14,7 @@ node_modules
 *.local
 
 # Config file
-/server/config.env
+/server/
 
 # Vite cache
 .vite
